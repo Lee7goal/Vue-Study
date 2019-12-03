@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
+<body>
+<!---->
+<div id="my-vue" style="border:1px solid black;text-align: center;padding-bottom: 30px;background: #400EEE" >
+<!--    <h1>双向数据绑定 input/select/textarea</h1>-->
+<!--    <label>-->
+<!--        姓名-->
+<!--        <input type="text" ref="name" @keyup="getName">-->
+<!--    </label>-->
+<!--    <span>{{name}}</span>-->
+<!--    <label>-->
+<!--        年龄-->
+<!--        <input type="text" ref="age" @keyup="getAge">-->
+<!--    </label>-->
+<!--    <span>{{age}}</span>-->
+<!--    计算属性-->
+
+<!--    <button @click="a++">Add to a</button>-->
+
+<!--    <p font-family="Hiragino Sans GB">A - {{ a }}</p>-->
+<!--    <p>B - {{ b }}</p>-->
+    <!--    methods-->
+<!--    <p>Age + A = {{addToA()}}</p>-->
+<!--    <p>Age + B = {{addToB()}}</p>-->
+    <!--    computed-->
+<!--    <p>Age + A = {{addToA}}</p>-->
+<!--    <p>Age + B = {{addToB}}</p>-->
+<!--    <el-button type="primary" plain @click="a++">Add to a</el-button>-->
+<!--    <el-button type="primary" plain @click="b++">Add to b</el-button>-->
+<!--    动态绑定 两种方式-->
+<!--    <h1>动态绑定 两种方式</h1>-->
+<!--    <h2>实例 1 属性绑定</h2>-->
+<!--    <div @click="mrChangeColor = !mrChangeColor" :class="{ChangeColor:mrChangeColor}">-->
+<!--        <span>hello</span>-->
+<!--    </div>-->
+<!--    <div :class="{ChangeColor:true}">-->
+<!--        <span>hello</span>-->
+<!--    </div>-->
+<!--    <div @click="mrChangeLength = !mrChangeLength" :class="{ChangeLength:mrChangeLength}">-->
+<!--        <span>hello</span>-->
+<!--    </div>-->
+<!--    <h2>实例 2 计算属性绑定</h2>-->
+<!--    <button @click="mrChangeColor = !mrChangeColor">Change Color</button>-->
+<!--    <button @click="mrChangeLength = !mrChangeLength">Change Length</button>-->
+<!--    <div-->
+<!--    :class="compClass"-->
+<!--    >-->
+<!--        <span>hello</span>-->
+<!--    </div>-->
+<!--    <h1>V-if指令</h1>-->
+<!--    <p v-if="error">-->
+<!--        error:如果条件为真，那么显示-->
+<!--    </p>-->
+<!--    <p v-else-if="success">-->
+<!--        success:如果条件为真，那么显示-->
+<!--    </p>-->
+
+<!--    <p v-else>-->
+<!--        other:呵呵 狗贼 啥都没了-->
+<!--    </p>-->
+<!--    <h1>v-show</h1>-->
+<!--    <p v-show="error">网络连接错误:404</p>-->
+<!--    <p v-show="success">网络连接成功:200</p>-->
+<!--    <button @click="listen()">{{ netButton }}</button>-->
+<!--    v-for-->
+<!--<h1>V-for的使用</h1>-->
+<!--    <ul>-->
+<!--        <li v-for="(rbq,i) in tmpList">{{ i }}:{{ rbq }}</li>-->
+<!--    </ul>-->
+
+<!--    <ul>-->
+<!--        <li v-for="value in users">-->
+<!--&lt;!&ndash;            <p v-for="a in value">&ndash;&gt;-->
+<!--&lt;!&ndash;                {{ a }}&ndash;&gt;-->
+<!--&lt;!&ndash;            </p>&ndash;&gt;-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--    <template v-for="a in users">-->
+<!--        <p v-for="(b,c) in a">{{ c }}&#45;&#45;{{ b }}</p>-->
+<!--    </template>-->
+    <div id="bag" :class="{burst:ended}"></div>
+    <div id="bag-health" >
+        <div :style="{width:health + '%'}"></div>
+    </div>
+    <p>剩余血量:{{health}}</p>
+    <div id="controls">
+        <button :plain="true" @click="punch" v-show="!ended">打击</button>
+        <button :plain="true" @click="restart">修复</button>
+    </div>
+</div>
+</body>
+
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,14 @@
+#vue-app{
+    border: 3px solid #42b983;
+    /*text-align: center;*/
+}
+h2{
+    -webkit-transition: all 0.05s linear;
+}
+h2:hover{
+    font-size: 200%;
+    color: #b9396b;
+}
+li{
+    list-style-type: none;
+}

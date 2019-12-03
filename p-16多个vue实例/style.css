@@ -1,0 +1,16 @@
+#vue-app-1{
+    border: 2px solid #000000;
+    text-align: center;
+}
+
+#vue-app-2{
+    border: 5px solid #3437ff;
+    text-align: center;
+}
+li{
+    -webkit-transition: all 0.1s linear;
+}
+li:hover{
+    color: #42b983;
+    font-size: 150%;
+}

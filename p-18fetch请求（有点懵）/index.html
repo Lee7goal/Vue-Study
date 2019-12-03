@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p-18 fetch请求</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<body>
+<h1>Fetch请求</h1>
+<div id="vue-app">
+<!--    post方法-->
+    <form @submit.prevent="onSubmit">
+        <input type="text" v-model="todo.title" />
+        <input type="checkbox" v-model="todo.completed" />
+        <input type="submit" value="提交" />
+    </form>
+<!--    {{ todos }}-->
+    <ul>
+        <li v-for="todo in todos">
+            <h2>{{todo.title}}</h2>
+            <p v-show="todo.completed">{{todo.completed}}</p>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="app.js"></script>
+</html>
